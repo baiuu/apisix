@@ -469,6 +469,7 @@ plugins:                           # plugin list (sorted by priority)
   - ai                             # priority: 22900
   - client-control                 # priority: 22000
   - proxy-control                  # priority: 21990
+  - proxy-buffering                # priority: 21989
   - request-id                     # priority: 12015
   - zipkin                         # priority: 12011
   #- skywalking                    # priority: 12010
