@@ -61,6 +61,7 @@ real-ip
 ai
 client-control
 proxy-control
+proxy-buffering
 request-id
 zipkin
 ext-plugin-pre-req
