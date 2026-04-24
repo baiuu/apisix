@@ -317,6 +317,6 @@ systemctl start apisix
 systemctl stop apisix
 ```
 
-如果你是通过其他方法安装的 APISIX，可以参考[配置文件模板](https://github.com/api7/apisix-build-tools/blob/master/usr/lib/systemd/system/apisix.service)进行修改，并将其添加在 `/usr/lib/systemd/system/apisix.service` 路径下。
+如果你是通过其他方法安装的 APISIX，可以参考[配置文件模板](https://github.com/baiuu/apisix-build-tools/blob/master/usr/lib/systemd/system/apisix.service)进行修改，并将其添加在 `/usr/lib/systemd/system/apisix.service` 路径下。
 
 如需了解 APISIX 后续使用，请参考[入门指南](./getting-started/README.md)获取更多信息。

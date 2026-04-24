@@ -109,7 +109,7 @@ If this does not solve your problem, you can try getting a detailed log by using
 
 ## How do I build the APISIX-Runtime environment?
 
-Some functions need to introduce additional NGINX modules, which requires APISIX to run on APISIX-Runtime. If you need these functions, you can refer to the code in [api7/apisix-build-tools](https://github.com/api7/apisix-build-tools) to build your own APISIX-Runtime environment.
+Some functions need to introduce additional NGINX modules, which requires APISIX to run on APISIX-Runtime. If you need these functions, you can refer to the code in [baiuu/apisix-build-tools](https://github.com/baiuu/apisix-build-tools) to build your own APISIX-Runtime environment.
 
 ## How can I make a gray release with Apache APISIX?
 

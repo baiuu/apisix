@@ -327,6 +327,6 @@ systemctl start apisix
 systemctl stop apisix
 ```
 
-If you installed APISIX through other methods, you can create `/usr/lib/systemd/system/apisix.service` and add the [configuration from the template](https://github.com/api7/apisix-build-tools/blob/master/usr/lib/systemd/system/apisix.service).
+If you installed APISIX through other methods, you can create `/usr/lib/systemd/system/apisix.service` and add the [configuration from the template](https://github.com/baiuu/apisix-build-tools/blob/master/usr/lib/systemd/system/apisix.service).
 
 See the [Getting Started](./getting-started/README.md) guide for a quick walk-through of using APISIX.

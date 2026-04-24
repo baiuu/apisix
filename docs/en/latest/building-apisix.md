@@ -39,7 +39,7 @@ If you are looking to quickly get started with APISIX, check out the other [inst
 
 To build an APISIX docker image from source code, see [build image from source code](https://apisix.apache.org/docs/docker/build/#build-an-image-from-customizedpatched-source-code).
 
-To build and package APISIX for a specific platform, see [apisix-build-tools](https://github.com/api7/apisix-build-tools) instead.
+To build and package APISIX for a specific platform, see [apisix-build-tools](https://github.com/baiuu/apisix-build-tools) instead.
 
 :::
 
@@ -199,7 +199,7 @@ apisix stop
 
 Some features of APISIX requires additional Nginx modules to be introduced into OpenResty.
 
-To use these features, you need to build a custom distribution of OpenResty (apisix-runtime). See [apisix-build-tools](https://github.com/api7/apisix-build-tools) for setting up your build environment and building it.
+To use these features, you need to build a custom distribution of OpenResty (apisix-runtime). See [apisix-build-tools](https://github.com/baiuu/apisix-build-tools) for setting up your build environment and building it.
 
 ## Running tests
 

@@ -85,9 +85,16 @@ install_curl () {
 
 install_apisix_runtime() {
     export runtime_version=${APISIX_RUNTIME}
-    wget "https://raw.githubusercontent.com/api7/apisix-build-tools/apisix-runtime/${APISIX_RUNTIME}/build-apisix-runtime.sh"
+    wget "https://raw.githubusercontent.com/baiuu/apisix-build-tools/apisix-runtime/${APISIX_RUNTIME}/build-apisix-runtime.sh"
     chmod +x build-apisix-runtime.sh
-    ./build-apisix-runtime.sh latest
+    # use local apisix-nginx-module submodule if available
+    if [ -d "./apisix-nginx-module" ] && [ -f "./apisix-nginx-module/src/ngx_http_apisix_module.c" ]; then
+        pushd ./apisix-nginx-module
+        ../build-apisix-runtime.sh latest
+        popd
+    else
+        ./build-apisix-runtime.sh latest
+    fi
 }
 
 install_grpcurl () {

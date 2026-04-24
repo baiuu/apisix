@@ -32,7 +32,7 @@ The `proxy-buffering` Plugin dynamically controls the NGINX proxy buffering beha
 
 :::info IMPORTANT
 
-This Plugin requires APISIX to run on [APISIX-Runtime](../FAQ.md#how-do-i-build-the-apisix-runtime-environment). See [apisix-build-tools](https://github.com/api7/apisix-build-tools) for more info.
+This Plugin requires APISIX to run on [APISIX-Runtime](../FAQ.md#how-do-i-build-the-apisix-runtime-environment). See [apisix-build-tools](https://github.com/baiuu/apisix-build-tools) for more info.
 
 :::
 

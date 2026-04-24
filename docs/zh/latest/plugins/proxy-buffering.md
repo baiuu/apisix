@@ -32,7 +32,7 @@ description: 本文介绍了 Apache APISIX proxy-buffering 插件的相关操作
 
 :::info 重要
 
-此插件需要 APISIX 在 [APISIX-Runtime](../FAQ.md#如何构建-apisix-runtime-环境) 环境上运行。更多信息请参考 [apisix-build-tools](https://github.com/api7/apisix-build-tools)。
+此插件需要 APISIX 在 [APISIX-Runtime](../FAQ.md#如何构建-apisix-runtime-环境) 环境上运行。更多信息请参考 [apisix-build-tools](https://github.com/baiuu/apisix-build-tools)。
 
 :::
 

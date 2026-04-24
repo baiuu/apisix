@@ -59,7 +59,7 @@ See the [installation guide](/installation-guide.md) for more details.
 
 All Docker images and binary packages (RPM, DEB) already come with all the necessary dependencies for APISIX.
 
-Some features might require additional Nginx modules in OpenResty and requires you to [build a custom OpenResty distribution (APISIX-Base)](https://github.com/api7/apisix-build-tools).
+Some features might require additional Nginx modules in OpenResty and requires you to [build a custom OpenResty distribution (APISIX-Base)](https://github.com/baiuu/apisix-build-tools).
 
 To run APISIX on a native OpenResty instance use [OpenResty version 1.19.3.2](https://openresty.org/en/download.html#legacy-releases) and above.
 

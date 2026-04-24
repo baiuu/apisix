@@ -40,7 +40,7 @@ install_dependencies() {
 
     install_apisix_runtime
     curl -o /usr/local/openresty/openssl3/ssl/openssl.cnf \
-        https://raw.githubusercontent.com/api7/apisix-build-tools/apisix-runtime/${APISIX_RUNTIME}/conf/openssl3/openssl.cnf
+        https://raw.githubusercontent.com/baiuu/apisix-build-tools/apisix-runtime/${APISIX_RUNTIME}/conf/openssl3/openssl.cnf
 
     # patch lua-resty-events
     sed -i 's/log(ERR, "event worker failed: ", perr)/log(ngx.WARN, "event worker failed: ", perr)/' /usr/local/openresty/lualib/resty/events/worker.lua

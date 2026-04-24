@@ -52,7 +52,7 @@ cd ..
 export cc_opt="-I$OPENSSL3_PREFIX/openssl-3.0/include"
 export ld_opt="-L$OPENSSL3_PREFIX/openssl-3.0/lib64 -Wl,-rpath,$OPENSSL3_PREFIX/openssl-3.0/lib64"
 
-wget --no-check-certificate https://raw.githubusercontent.com/api7/apisix-build-tools/master/build-apisix-runtime.sh
+wget --no-check-certificate https://raw.githubusercontent.com/baiuu/apisix-build-tools/master/build-apisix-runtime.sh
 chmod +x build-apisix-runtime.sh
 ./build-apisix-runtime.sh
 ```

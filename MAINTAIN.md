@@ -35,7 +35,7 @@
 9. Create a [GitHub release](https://github.com/apache/apisix/releases/tag/2.10.2) from the minor branch
 10. Update [APISIX's website](https://github.com/apache/apisix-website/commit/f9104bdca50015722ab6e3714bbcd2d17e5c5bb3) if the version number is the largest
 11. Update APISIX rpm package
-    > Go to [apisix-build-tools](https://github.com/api7/apisix-build-tools) repository and create a new tag named `apisix-${x.y.z}` to automatically submit the
+    > Go to [apisix-build-tools](https://github.com/baiuu/apisix-build-tools) repository and create a new tag named `apisix-${x.y.z}` to automatically submit the
     package to yum repo
 12. - If the version number is the largest, update [APISIX docker](https://github.com/apache/apisix-docker/commit/829d45559c303bea7edde5bebe9fcf4938071601) in [APISIX docker repository](https://github.com/apache/apisix-docker), after PR merged, then create a new branch from master, named as `release/apisix-${version}`, e.g. `release/apisix-2.10.2`.
     - If released an LTS version and the version number less than the current largest(e.g. the current largest version number is 2.14.1, but the LTS version 2.13.2 is to be released), submit a PR like [APISIX docker](https://github.com/apache/apisix-docker/pull/322) in [APISIX docker repository](https://github.com/apache/apisix-docker) and named as `release/apisix-${version}`, e.g. `release/apisix-2.13.2`, after PR reviewed, don't need to merged PR, just close the PR and push the branch to APISIX docker repository.
@@ -55,7 +55,7 @@
 8. Merge the pull request into master branch
 9. Update [APISIX's website](https://github.com/apache/apisix-website/commit/7bf0ab5a1bbd795e6571c4bb89a6e646115e7ca3)
 10. Update APISIX rpm package.
-    > Go to [apisix-build-tools](https://github.com/api7/apisix-build-tools) repository and create a new tag named `apisix-${x.y.z}` to automatically submit the rpm package to yum repo
+    > Go to [apisix-build-tools](https://github.com/baiuu/apisix-build-tools) repository and create a new tag named `apisix-${x.y.z}` to automatically submit the rpm package to yum repo
 11. - If the version number is the largest, update [APISIX docker](https://github.com/apache/apisix-docker/commit/829d45559c303bea7edde5bebe9fcf4938071601) in [APISIX docker repository](https://github.com/apache/apisix-docker), after PR merged, then create a new branch from master, named as `release/apisix-${version}`, e.g. `release/apisix-2.10.2`.
     - If released an LTS version and the version number less than the current largest(e.g. the current largest version number is 2.14.1, but the LTS version 2.13.2 is to be released), submit a PR like [APISIX docker](https://github.com/apache/apisix-docker/pull/322) in [APISIX docker repository](https://github.com/apache/apisix-docker) and named as `release/apisix-${version}`, e.g. `release/apisix-2.13.2`, after PR reviewed, don't need to merged PR, just close the PR and push the branch to APISIX docker repository.
 12. Update [APISIX helm chart](https://github.com/apache/apisix-helm-chart/pull/234)
