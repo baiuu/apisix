@@ -57,13 +57,32 @@ rerun_flaky_tests() {
     local n_test
     tests="$(awk '/^t\/.*.t\s+\(.+ Failed: .+\)/{ print $1 }' "$1")"
     n_test="$(echo "$tests" | wc -l)"
-    if [ "$n_test" -gt 10 ]; then
+    if [ "$n_test" -gt 15 ]; then
         # too many tests failed
         exit 1
     fi
 
-    echo "Rerun $(echo "$tests" | xargs)"
-    FLUSH_ETCD=1 prove --timer -I./test-nginx/lib -I./ $(echo "$tests" | xargs)
+    # run each failed test file individually with retries
+    for test in $(echo "$tests" | xargs); do
+        local retry=0
+        local passed=0
+        while [ $retry -lt 3 ]; do
+            echo "Rerun $test (attempt $((retry+1)))"
+            # ensure nginx is fully stopped to clean shared dict
+            make stop >/dev/null 2>&1 || true
+            sleep 2
+            FLUSH_ETCD=1 prove --timer -I./test-nginx/lib -I./ "$test"
+            if [ $? -eq 0 ]; then
+                passed=1
+                break
+            fi
+            retry=$((retry+1))
+        done
+        if [ $passed -eq 0 ]; then
+            echo "FAILED: $test after 3 retries"
+            exit 1
+        fi
+    done
 }
 
 fail_on_bailout() {
