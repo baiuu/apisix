@@ -46,8 +46,6 @@ end
 
 -- we want to control proxy behavior before auth, so put the code under rewrite method
 function _M.rewrite(conf, ctx)
-    core.log.warn("proxy-buffering rewrite called, enable=", conf.enable, ", ok=", ok)
-
     if not ok then
         core.log.error("need to build APISIX-Runtime to support proxy buffering")
         return 501
@@ -56,7 +54,6 @@ function _M.rewrite(conf, ctx)
     local enable = conf.enable
     if enable ~= nil then
         local ok, err = apisix_ngx_client.set_proxy_buffering(enable)
-        core.log.warn("set_proxy_buffering(", enable, ") ret=", ok, " err=", err)
         if not ok then
             core.log.error("failed to set proxy_buffering: ", err)
             return 503
